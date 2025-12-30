@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Surprise Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create a Love Note</h1>
+        <p>Enter a secret note below. We'll generate a QR code for your sweetheart to scan!</p>
+        <form id="qr-form">
+            <input type="text" id="qr-input" placeholder="e.g., I love you more every day..." required>
+            <button type="submit">Generate Love Code ❤️</button>
+        </form>
+        <div id="qr-result" style="display: none;">
+            <h2>Here is your QR Code:</h2>
+            <canvas id="qr-canvas"></canvas>
+            <p>Scan this to see the surprise!</p>
+            <a id="custom-link" href="#" target="_blank">Or click here to preview</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.3/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

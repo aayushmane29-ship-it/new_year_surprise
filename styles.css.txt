@@ -1,0 +1,103 @@
+/* Import a romantic font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital@1&display=swap');
+
+body {
+    font-family: 'Lora', serif; /* Elegant serif for body text */
+    /* Romantic Gradient: Pink to soft Peach */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    color: #5d3a3a;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.85); /* More opaque white */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+    border: 2px solid #fff;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Cursive header */
+    color: #e91e63; /* Deep Pink */
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size: 1.1em;
+}
+
+input, button {
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #ffc1e3;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Lora', serif;
+    outline: none;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+input:focus {
+    border-color: #e91e63;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background: #c2185b;
+    transform: scale(1.02);
+}
+
+#qr-result {
+    margin-top: 30px;
+    border-top: 1px dashed #e91e63;
+    padding-top: 20px;
+}
+
+canvas {
+    margin: 20px auto;
+    display: block;
+    border: 10px solid white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific style for the greeting on the custom page */
+.heart-icon {
+    font-size: 50px;
+    color: #e91e63;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

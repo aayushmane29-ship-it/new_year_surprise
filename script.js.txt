@@ -1,0 +1,27 @@
+document.getElementById('qr-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = document.getElementById('qr-input').value;
+    const qrCanvas = document.getElementById('qr-canvas');
+    const resultDiv = document.getElementById('qr-result');
+    const link = document.getElementById('custom-link');
+
+    // Generate QR code linking to custom.html
+    // Note: This relies on both files being in the same folder
+    const customUrl = `${window.location.origin}/custom.html?data=${encodeURIComponent(input)}`;
+    
+    // Clear previous QR code if any
+    const context = qrCanvas.getContext('2d');
+    context.clearRect(0, 0, qrCanvas.width, qrCanvas.height);
+
+    QRCode.toCanvas(qrCanvas, customUrl, { 
+        width: 256,
+        color: {
+            dark: '#e91e63',  // Changed QR color to deep pink
+            light: '#ffffff'
+        }
+    }, function(error) {
+        if (error) console.error(error);
+        resultDiv.style.display = 'block';
+        link.href = customUrl;
+    });
+});
